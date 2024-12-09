@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "don_it",
+  "version": "${version}",
+  "name": "戴它",
+  "description": "戴上你手里的东西",
+  "authors": [
+    "Flowersauce"
+  ],
+  "contact": {
+    "homepage": "https://github.com/flowersauce/Don-it",
+    "sources": "https://github.com/flowersauce/Don-it"
+  },
+  "license": "MIT",
+  "icon": "assets/don_it/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.flowersauce.don_it.client.DonItClient"
+    ],
+    "main": [
+      "net.flowersauce.don_it.DonIt"
+    ]
+  },
+  "mixins": [
+    "don_it.mixins.json",
+    {
+      "config": "don_it.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": ">=${minecraft_version}"
+  }
+}
