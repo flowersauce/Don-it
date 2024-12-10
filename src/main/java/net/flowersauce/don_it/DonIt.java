@@ -1,31 +1,19 @@
 package net.flowersauce.don_it;
 
 import com.mojang.brigadier.arguments.StringArgumentType;
-import com.mojang.serialization.Codec;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
-import net.minecraft.component.ComponentType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.util.Identifier;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class DonIt implements ModInitializer
 {
-    // 注册自定义组件
-    public static final ComponentType<String> DONIT_CURSE = Registry.register(
-            Registries.DATA_COMPONENT_TYPE,
-            Identifier.of("don_it", "donit_curse"),
-            ComponentType.<String>builder().codec(Codec.STRING).build()
-    );
-
     @Override
     public void onInitialize()
     {

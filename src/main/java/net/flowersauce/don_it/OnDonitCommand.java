@@ -2,6 +2,7 @@ package net.flowersauce.don_it;
 
 import com.mojang.brigadier.context.CommandContext;
 import net.minecraft.component.ComponentMap;
+import net.minecraft.component.type.LoreComponent;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -111,7 +112,7 @@ public class OnDonitCommand
             {
                 if (offHeadItem.getItem() == Items.NETHERITE_INGOT)
                 {
-                    offHeadItem.getOrDefault(DonIt.DONIT_CURSE, "123");
+                    offHeadItem.getOrDefault("lore", );
 
                     System.out.println(offHeadItem.getComponents());
                 }
