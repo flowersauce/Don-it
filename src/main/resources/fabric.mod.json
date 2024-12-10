@@ -22,13 +22,6 @@
       "net.flowersauce.don_it.DonIt"
     ]
   },
-  "mixins": [
-    "don_it.mixins.json",
-    {
-      "config": "don_it.client.mixins.json",
-      "environment": "client"
-    }
-  ],
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
